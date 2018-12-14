@@ -1,7 +1,7 @@
 package main
 
-import "fmt"
+import "github.com/chri5bot/opinions-pya/services/opinions/cmd"
 
 func main() {
-	fmt.Println("Hello World")
+	cmd.Execute()
 }
