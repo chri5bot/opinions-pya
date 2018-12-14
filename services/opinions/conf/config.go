@@ -20,6 +20,7 @@ type Configuration struct {
 
 func loadEnviroment(filename string) error {
 	var err error
+
 	if filename != "" {
 		err = godotenv.Load(filename)
 	} else {

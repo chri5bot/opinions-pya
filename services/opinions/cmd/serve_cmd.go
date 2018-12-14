@@ -3,6 +3,7 @@ package cmd
 import (
 	"log"
 
+	"github.com/chri5bot/opinions-pya/services/opinions/conf"
 	"github.com/spf13/cobra"
 )
 
@@ -20,5 +21,10 @@ var serveCmd = &cobra.Command{
 }
 
 func serve() {
-	log.Println("serve Christian Torres")
+	config, err := conf.LoadConfig(configFile)
+	if err != nil {
+		log.Fatalf("Failed to load configuration: %+v", err)
+	}
+	log.Println("config", config)
+
 }
